@@ -63,7 +63,7 @@ with tab1:
     cam_on = st.checkbox("Turn camera on")
     
     if cam_on:
-        image = st.camera_input("**Show QR code**")
+        image = st.camera_input("**Show QR code:**")
 
 
         if image is not None:
