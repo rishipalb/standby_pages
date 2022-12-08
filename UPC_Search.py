@@ -34,7 +34,7 @@ def upc_check(upc_code):
             res = response.status_code
         
             if res == 200:
-                st.write("Connection Success!")
+                st.success("Connection Success!")
                 #st.write(response.text)
                 data = response.json()
                 label=data['hints'][0]["food"]["label"]
@@ -48,11 +48,11 @@ def upc_check(upc_code):
                 # write dataframe to screen
                     st.write("**Recall history**", new_df1)
                 else:
-                    st.write("**Recall history:** Could not find a match.")
+                    st.warning("**Recall history:** Could not find a match.")
             elif res != 200:
                 st.write("**Error code:**", response.status_code, ". Try again or use another UPC code.")
         else:
-            st.write("**Input error:** Please enter UPC code with 12 digits.")
+            st.error("**Input error:** Please enter UPC code with 12 digits.")
 
 tab1, tab2 = st.tabs(['Search UPC', 'Scan QR code'])
 with tab1:
@@ -78,6 +78,6 @@ with tab1:
             st.write(data)
             upc_check(data) """
 
-st.write("**Example**: Negative: 046675013624, 046675013501")
-st.write("UPC search is powered by RapidAPI and Edamam-Food Database API.")
-st.write("**Disclaimer**: This is app is for experimental and educational purpose only. The dataset may not be current and therefore would result in inaccurate and outdate information. The developer does not take any responsibility in the event of potential harm caused by the inadvertent use of this app.")
+st.info("**Example**: Negative: 046675013624, 046675013501")
+st.info("UPC search is powered by RapidAPI and Edamam-Food Database API.")
+st.info("**Disclaimer**: This is app is for experimental and educational purpose only. The dataset may not be current and therefore would result in inaccurate and outdate information. The developer does not take any responsibility in the event of potential harm caused by the inadvertent use of this app.")
