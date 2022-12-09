@@ -7,5 +7,5 @@ streamlit==1.14.1
 =======
 streamlit==1.15.2
 openpyxl==3.0.10
-opencv_python==4.6.0.66
+
 >>>>>>> 56c95bb2c129c2c402d3b57a43b09f1295baf98d
