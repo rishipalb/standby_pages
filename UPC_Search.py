@@ -3,7 +3,7 @@ import requests
 import json
 #import xmltodict
 import pandas as pd
-#import cv2
+import cv2
 import numpy as np
 from dotenv import load_dotenv
 import os
@@ -60,8 +60,8 @@ tab1, tab2 = st.tabs(['Search UPC', 'Scan QR code'])
 with tab1:
     st.markdown("## UPC Search")
     upc_check(st.text_input("**Enter UPC code:**"))
-#with tab2:
-"""     st.markdown("## QR Scan")
+with tab2:
+    st.markdown("## QR Scan")
     cam_on = st.checkbox("Turn camera on")
     
     if cam_on:
@@ -78,7 +78,7 @@ with tab1:
 
             #st.write("Here!")
             st.write(data)
-            upc_check(data) """
+            upc_check(data)
 
 st.info("**Example**: 046675013624, 046675013501.")
 st.info("UPC search is powered by RapidAPI and Edamam-Food Database API.")
