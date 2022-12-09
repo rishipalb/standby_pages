@@ -78,6 +78,6 @@ with tab1:
             st.write(data)
             upc_check(data) """
 
-st.info("**Example**: Negative: 046675013624, 046675013501")
+st.info("**Example**: 046675013624, 046675013501")
 st.info("UPC search is powered by RapidAPI and Edamam-Food Database API.")
 st.info("**Disclaimer**: This is app is for experimental and educational purpose only. The dataset may not be current and therefore would result in inaccurate and outdate information. The developer does not take any responsibility in the event of potential harm caused by the inadvertent use of this app.")
