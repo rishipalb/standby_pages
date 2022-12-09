@@ -50,7 +50,8 @@ def upc_check(upc_code):
                 else:
                     st.warning("**Recall history:** Could not find a match.")
             elif res != 200:
-                st.write("**Error code:**", response.status_code, ". Try again or use another UPC code.")
+                st.error("**Error:** Try again or use another UPC code.")
+                st.write("**Error code:**", response.status_code)
         else:
             st.error("**Input error:** Please enter UPC code with 12 digits.")
 
